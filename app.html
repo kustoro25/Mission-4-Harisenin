@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My To-Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <!-- Halaman Aplikasi Utama -->
+    <div class="app-container" id="app-container">
+      <div class="app-header">
+        <div class="app-header-content">
+          <div class="app-title-section">
+            <div class="current-date">
+              <div class="current-day" id="current-day">Senin</div>
+              <div class="current-date-full" id="current-date-full">
+                1 Januari 2025
+              </div>
+              <span id="jam"></span>
+            </div>
+          </div>
+
+          <div class="logo-section">
+            <img
+              src="assets/logo.jpg"
+              class="app-logo-img"
+              alt="TaskFlow Pro Logo"
+            />
+            <h4 style="text-align: center">TO-DO LIST APP</h4>
+          </div>
+
+          <div class="user-section">
+            <div class="user-info">
+              <b> <span style="color: var(--primary)">Welcome,</span></b>
+              <div class="user-name" id="user-name">Nama Pengguna</div>
+              <div class="user-profession" id="user-profession">Profesi</div>
+            </div>
+            <button class="logout-btn" id="logout-btn">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="task-input-container">
+        <div class="task-input-row">
+          <input
+            type="text"
+            class="task-input"
+            id="task-input"
+            placeholder="Tambahkan tugas baru..."
+          />
+          <input type="date" class="tambah-task-date" id="task-date" />
+          <select class="task-priority" id="task-priority">
+            <option value="low">Prioritas Rendah</option>
+            <option value="medium" selected>Prioritas Sedang</option>
+            <option value="high">Prioritas Tinggi</option>
+          </select>
+        </div>
+        <button class="add-task-btn" id="add-task-btn">Tambah Tugas</button>
+      </div>
+
+      <div class="filter-menu" id="filter-menu">
+        <button class="filter-btn active" data-filter="all">Semua Tugas</button>
+        <button class="filter-btn" data-filter="active">Tugas Aktif</button>
+        <button class="filter-btn" data-filter="completed">
+          Tugas Selesai
+        </button>
+        <button class="filter-btn" data-filter="today">Tugas Hari Ini</button>
+        <button class="filter-btn" data-filter="date">Filter Tanggal</button>
+      </div>
+
+      <div class="date-filter-container" id="date-filter-container">
+        <input
+          type="date"
+          class="date-filter-input"
+          id="start-date"
+          placeholder="Tanggal Mulai"
+        />
+        <b class="sampai">-</b>
+        <input
+          type="date"
+          class="date-filter-input"
+          id="end-date"
+          placeholder="Tanggal Akhir"
+        />
+        <button class="apply-filter-btn" id="apply-date-filter">
+          Terapkan Filter
+        </button>
+        <button class="apply-filter-btn" id="reset-date-filter">
+          Reset Filter
+        </button>
+      </div>
+
+      <div class="task-stats" id="task-stats">
+        <div class="stat-item">
+          <span class="stat-value" id="total-tasks">0</span>
+          <span class="stat-label">Total Tugas</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value" id="active-tasks">0</span>
+          <span class="stat-label">Tugas Aktif</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value" id="completed-tasks">0</span>
+          <span class="stat-label">Tugas Selesai</span>
+        </div>
+      </div>
+
+      <ul class="task-list" id="task-list">
+        <!-- Daftar tugas akan ditampilkan di sini -->
+      </ul>
+
+      <button class="delete-all-btn" id="delete-all-btn">
+        Hapus Semua Tugas
+      </button>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

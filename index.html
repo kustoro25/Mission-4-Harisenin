@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do-List APP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/landing.css" />
+  </head>
+  <body>
+    <!-- Halaman Landing -->
+    <div class="landing-container" id="landing-page">
+      <div class="app-logo">
+        <img src="assets/logo.jpg" class="logo-img" alt="TaskFlow Pro Logo" />
+      </div>
+      <h1 class="landing-title">TaskFlow Pro</h1>
+      <p class="landing-subtitle">Aplikasi Manajemen Tugas Karyawan</p>
+
+      <div class="landing-buttons" id="landing-buttons">
+        <button class="landing-btn btn-login" id="login-btn">Login</button>
+        <button class="landing-btn btn-register" id="register-btn">
+          Register
+        </button>
+      </div>
+
+      <!-- Form Register -->
+      <div class="username-form" id="register-form">
+        <div class="form-group">
+          <label for="register-name" class="form-label">Nama Lengkap</label>
+          <input
+            type="text"
+            class="form-input"
+            placeholder="Masukan Nama Lengkap"
+            required
+            id="register-name"
+          />
+          <label for="register-profesi" class="form-label">Pekerjaan</label>
+          <input
+            type="text"
+            class="form-input"
+            placeholder="Masukan Pekerjaan Anda"
+            required
+            id="register-profesi"
+          />
+          <label for="register-username" class="form-label">Username</label>
+          <input
+            type="text"
+            class="form-input"
+            placeholder="Masukan Username"
+            required
+            id="register-username"
+          />
+          <label for="register-password" class="form-label">Kata sandi</label>
+          <input
+            type="password"
+            class="form-input"
+            placeholder="Masukan kata sandi"
+            required
+            id="register-password"
+          />
+          <label for="register-confirm-password" class="form-label"
+            >Konfirmasi Kata sandi</label
+          >
+          <input
+            type="password"
+            class="form-input"
+            placeholder="Konfirmasi Kata sandi"
+            required
+            id="register-confirm-password"
+          />
+          <div class="error-message" id="register-error"></div>
+        </div>
+        <div class="form-actions">
+          <button class="form-btn form-btn-secondary" id="cancel-register-btn">
+            Cancel
+          </button>
+          <button
+            type="submit"
+            class="form-btn form-btn-primary"
+            id="save-register-btn"
+          >
+            Continue
+          </button>
+        </div>
+      </div>
+
+      <!-- Form Login -->
+      <div class="username-form" id="login-form">
+        <div class="form-group">
+          <label for="login-username" class="form-label">Username</label>
+          <input
+            type="text"
+            class="form-input"
+            placeholder="Username"
+            required
+            id="login-username"
+          />
+          <label for="login-password" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-input"
+            placeholder="Password"
+            required
+            id="login-password"
+          />
+          <div class="error-message" id="login-error"></div>
+        </div>
+        <div class="form-actions">
+          <button class="form-btn form-btn-secondary" id="cancel-login-btn">
+            Cancel
+          </button>
+          <button
+            type="submit"
+            class="form-btn form-btn-primary"
+            id="login-submit-btn"
+          >
+            Login
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/landing.js"></script>
+  </body>
+</html>
