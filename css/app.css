@@ -321,10 +321,31 @@ body {
 }
 
 .task-checkbox {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: var(--border);
+  border-radius: 6px;
   margin-right: 1rem;
-  width: 20px;
-  height: 20px;
+  position: relative;
   cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.task-checkbox:checked {
+  background-color: var(--primary);
+}
+
+.task-checkbox:checked::after {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--dark);
+  font-size: 1rem;
 }
 
 .task-content {
